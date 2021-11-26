@@ -1,0 +1,10 @@
+.main {
+  @apply flex-grow flex h-full;
+  scroll-behavior: smooth;
+  .center {
+    @apply w-2/4 flex flex-col border-r-2 border-l-2;
+  }
+  .details {
+    @apply w-1/4;
+  }
+}

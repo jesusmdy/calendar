@@ -1,0 +1,22 @@
+.titleContainer {
+  @apply py-4 border-b-2 grid grid-cols-12;
+  .dayBadge {
+    @apply col-span-2 grid grid-cols-3 h-10 select-none;
+    .dayName {
+      @apply col-span-2 text-blue-500 font-bold flex items-center px-6;
+    }
+    .dayNumber {
+      @apply bg-blue-500 rounded-full text-xl font-bold rounded-full text-white;
+      @apply flex items-center justify-center;
+    }
+  }
+  .actions {
+    @apply col-span-10 flex items-center justify-end px-4;
+    .action {
+      @apply border-2 block text-gray-500 rounded-xl px-4 py-2 text-sm font-bold ml-2;
+      &.active {
+        @apply bg-blue-50 border-blue-500 text-blue-500;
+      }
+    }
+  }
+}

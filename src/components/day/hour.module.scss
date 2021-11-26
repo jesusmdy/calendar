@@ -1,0 +1,30 @@
+.hourContainer {
+  @apply h-16 grid grid-cols-12 cursor-pointer border-b-2;
+  &:hover {
+    @apply bg-gray-100;
+  }
+  &.current {
+    @apply bg-gray-50;
+    .icon {
+      @apply text-blue-500;
+    }
+    .hour {
+      @apply text-blue-500;
+    }
+  }
+  .icon {
+    @apply relative flex items-center justify-center cursor-pointer text-gray-500;
+    .currentHour {
+      @apply h-5 w-5 absolute left-0;
+    }
+    &:hover {
+      @apply text-blue-500;
+      svg {
+        @apply h-6 w-6;
+      }
+    }
+  }
+  .hour {
+    @apply flex items-center justify-center select-none text-xs font-bold;
+  }
+}

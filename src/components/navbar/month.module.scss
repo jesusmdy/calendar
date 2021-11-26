@@ -1,0 +1,61 @@
+.monthContainer {
+  @apply col-span-3 p-2;
+  .month {
+    @apply grid grid-cols-8 bg-gray-100 rounded-full h-12 relative;
+    &.activeMonth {
+      @apply ring bg-blue-50;
+    }
+    .listboxOptions {
+      @apply absolute top-12 left-0 right-0 bg-white shadow-xl border-2 rounded-xl overflow-auto;
+      .listboxOption {
+        @apply text-left py-2 capitalize select-none cursor-pointer grid grid-cols-8;
+        &:hover {
+          .optionIcon {
+            .icon {
+              @apply block;
+            }
+          }
+        }
+        .optionIcon {
+          @apply col-span-2 flex items-center justify-center text-gray-500;
+          .icon {
+            @apply w-5 h-5 hidden;
+          }
+        }
+        .optionTitle {
+          @apply col-span-4 flex items-center;
+        }
+        &.activeListBoxOption {
+          @apply text-blue-500 bg-blue-50 font-bold;
+          .optionIcon {
+            .icon {
+              @apply block text-blue-500;
+            }
+          }
+        }
+        &:hover {
+          @apply bg-gray-50;
+        }
+      }
+    }
+    .action {
+      @apply col-span-2 rounded-full;
+      .button {
+        @apply rounded-full w-full h-full flex text-gray-400 items-center justify-center;
+        &:hover {
+          @apply bg-blue-50 text-blue-500;
+        }
+      }
+    }
+    .text {
+      @apply relative cursor-default select-none col-span-4 flex items-center capitalize justify-center;
+      @apply cursor-pointer;
+      &:hover {
+        @apply bg-gray-200;
+      }
+      .title {
+        @apply font-medium;
+      }
+    }
+  }
+}

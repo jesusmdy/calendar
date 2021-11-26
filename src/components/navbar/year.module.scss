@@ -1,0 +1,21 @@
+.yearContainer {
+  @apply col-span-3 p-2;
+  .year {
+    @apply grid grid-cols-8 bg-gray-100 rounded-full h-12;
+    .action {
+      @apply col-span-2 rounded-full;
+      .button {
+        @apply rounded-full w-full h-full flex text-gray-400 items-center justify-center;
+        &:hover {
+          @apply bg-blue-50 text-blue-500;
+        }
+      }
+    }
+    .text {
+      @apply cursor-default select-none col-span-4 flex items-center capitalize justify-center;
+      .title {
+        @apply font-medium;
+      }
+    }
+  }
+}

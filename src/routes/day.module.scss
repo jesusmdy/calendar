@@ -1,0 +1,4 @@
+.days {
+  @apply flex-grow overflow-auto h-full;
+  scroll-behavior: smooth;
+}

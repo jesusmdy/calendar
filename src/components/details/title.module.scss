@@ -1,0 +1,21 @@
+.titleContainer {
+  @apply h-16 flex items-center px-4 text-gray-600;
+  .title {
+    @apply w-2/4 flex items-center;
+    p {
+      @apply ml-2 text-xl text-center select-none;
+    }
+  }
+  .actions {
+    @apply w-2/4 h-full flex items-center justify-end;
+    .action {
+      @apply rounded-lg h-12 w-12 flex items-center justify-center;
+      &:hover {
+        @apply text-blue-500;
+      }
+      &:focus {
+        @apply text-blue-500;
+      }
+    }
+  }
+}

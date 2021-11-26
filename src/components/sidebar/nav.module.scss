@@ -1,0 +1,32 @@
+.nav {
+  @apply block h-16 flex items-center;
+  .logo {
+    @apply h-full flex items-center px-8;
+    img {
+      @apply h-10 w-auto;
+    }
+    span {
+      @apply ml-2 text-lg font-medium;
+      &:hover {
+        @apply text-blue-500;
+      }
+    }
+  }
+  .action {
+    @apply flex items-center justify-end px-4 flex-1 h-full;
+    button {
+      @apply h-12 bg-blue-500 rounded-full flex-grow font-bold text-white;
+      @apply bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500;
+      @apply flex items-center justify-center;
+      &:focus {
+        @apply ring;
+      }
+      span {
+        @apply w-2/4;
+      }
+      div {
+        @apply w-1/4 h-full flex items-center justify-center;
+      }
+    }
+  }
+}

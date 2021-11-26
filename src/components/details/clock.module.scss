@@ -1,0 +1,65 @@
+.clockModule {
+  @apply m-4 rounded-xl border-2 bg-gray-50 border-blue-100 select-none;
+  // @apply text-white bg-gradient-to-r from-blue-700 via-blue-500 to-blue-400;
+  .title {
+    @apply p-4 pb-0 flex items-center justify-between;
+    p {
+      @apply text-xl text-blue-400 font-bold;
+    }
+    .rightControls {
+      @apply flex items-center;
+      .nowButton {
+        @apply border-2 border-transparent h-8 w-8 rounded-full flex items-center justify-center mr-4;
+        @apply text-blue-500;
+        &:hover {
+          @apply bg-blue-100;
+        }
+        &:focus {
+          @apply ring;
+        }
+      }
+      .hourControls {
+        @apply border-2 border-blue-300 flex rounded-lg text-blue-400;
+        .hourControl {
+          @apply block rounded-r-lg h-8 w-8 flex items-center justify-center;
+          &:hover {
+            @apply bg-blue-100 text-blue-700;
+          }
+          &:first-child {
+            @apply rounded-l-lg rounded-r-none border-r-2 border-blue-300;
+          }
+        }
+      }
+    }
+  }
+  .jumps {
+    @apply grid grid-cols-4 p-4 pt-0 gap-4;
+    .jump {
+      @apply border-2 border-transparent text-xs rounded-lg p-2 font-bold text-blue-300;
+      &.activeJump {
+        @apply bg-blue-100 border-blue-500 text-blue-500;
+      }
+      &:hover {
+        @apply text-blue-500 bg-blue-100;
+      }
+    }
+  }
+  .clock {
+    @apply flex h-28;
+    .hour {
+      @apply w-2/4 font-bold flex items-center justify-center text-6xl text-blue-600;
+      .type {
+        @apply text-lg text-blue-300 h-12 flex items-end;
+      }
+    }
+    .selector {
+      @apply w-1/4 flex items-center justify-center;
+      .button {
+        @apply text-blue-400 flex border-2 border-transparent items-center justify-center rounded-full w-10 h-10;
+        &:focus {
+          @apply bg-blue-50 ring;
+        }
+      }
+    }
+  }
+}

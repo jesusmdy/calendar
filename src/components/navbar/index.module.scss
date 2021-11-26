@@ -1,0 +1,30 @@
+.navbar {
+  @apply flex shadow-sm z-10 w-full;
+  &.elevated {
+    @apply shadow-lg;
+  }
+  .left {
+    @apply w-1/4 grid grid-cols-9;
+    .iconContainer {
+      @apply px-8 col-span-6 flex items-center justify-start;
+      .icon {
+        @apply h-8 w-8;
+      }
+      .text {
+        @apply text-xl ml-2;
+      }
+    }
+    .action {
+      @apply col-span-3 flex items-center justify-end px-4;
+      .button {
+        @apply h-10 w-10 text-white bg-blue-500 rounded-full flex items-center justify-center;
+        &:hover {
+          @apply bg-blue-600 shadow-lg;
+        }
+      }
+    }
+  }
+  .center {
+    @apply w-2/4 grid grid-cols-9;
+  }
+}
